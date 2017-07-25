@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-faded">
+    <a class="navbar-brand" href="#">C&D</a>
+    <ul class="nav navbar-nav float-md-right">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['home']" routerLinkActive="active"><i class="fa fa-home"></i>Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['play']" routerLinkActive="active"><i class="fa fa-play"></i>Jugar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['admin/term']" routerLinkActive="active"><i class="fa fa-book"></i>Terminos</a>
+        </li>
+    </ul>
+</nav>
+<div class="container">
+      <router-outlet></router-outlet>
+      <template ngbModalContainer></template>
+</div>

@@ -1,0 +1,1 @@
+{"version":3,"file":"rating.component.js","sourceRoot":"","sources":["rating.component.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAAwB,eAAe,CAAC,CAAA;AAOxC;IAAA;QACE,gBAAW,GAAG,CAAC,CAAC;IAClB,CAAC;IAPD;QAAC,gBAAS,CAAC;YACT,QAAQ,EAAE,MAAM,CAAC,EAAE;YACnB,QAAQ,EAAE,mBAAmB;YAC7B,WAAW,EAAE,uBAAuB;SACrC,CAAC;;uBAAA;IAGF,sBAAC;AAAD,CAAC,AAFD,IAEC;AAFY,uBAAe,kBAE3B,CAAA"}

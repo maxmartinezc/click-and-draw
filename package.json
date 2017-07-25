@@ -1,0 +1,17 @@
+{
+  "name": "clickndraw",
+  "version": "1.0.0",
+  "description": "Click And Draw",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Martinez Cartagena",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "mongojs": "^2.4.0"
+  }
+}

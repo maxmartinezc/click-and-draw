@@ -1,0 +1,47 @@
+<h3>Click and Draw, obten un termino y comienza a dibujar</h3>
+<hr/>
+<div class="card-deck-wrapper">
+  <div class="card-deck">
+    <div class="card text-md-center align-middle">
+        <div class="card-block">
+            <h1 class="card-title"><i class="fa fa-hourglass{{text?'-half':''}}" aria-hidden="true"></i></h1>
+            <p class="card-text">{{time | timer}}</p>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-secondary" (click)="getOneTerm()" [disabled]="text?true:false">Obtener un termino</button>
+            <button class="btn btn-secondary" #btnStopTimer (click)="openModal(content)" [disabled]="isFinished?true:false">Terminar</button>
+        </div>
+    </div>
+    <div class="card align-middle">
+        <div class="card-block">
+            <h4 class="card-title">Puntuaci&oacute;n</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item {{ teamTurn == team && text != '' ? 'font-weight-bold' : ''}}" *ngFor="let teamAnswer of teamAnswers; let team = index">
+                <p class="card-text">
+                    <span class="pr-1">Equipo {{ team + 1 }}</span><i *ngFor='let value of teamAnswer.good' class="fa fa-star"></i>({{ teamAnswer.good?.length }})
+                </p>
+                <p class="card-text">
+                    <span class="tag tag-pill tag-success small" *ngFor="let answer of teamAnswer.good">{{answer}}</span>
+                    <span class="tag tag-pill tag-danger small" *ngFor="let answer of teamAnswer.bad">{{answer}}</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+  </div>
+</div>
+<div class="col-md-6 text-md-center">
+    <h2 class="text-primary">Dibuja: {{text?text:'?'}}</h2>
+</div>
+<template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Terminar</h4>
+  </div>
+  <div class="modal-body">
+    <p>¿El Equipo {{ teamTurn + 1 }} dibuj&oacute; correctamente el concepto <span class="font-italic">"{{ text }}"</span>?</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-success" (click)="c(true)">Si</button>
+    <button class="btn btn-danger" (click)="c(false)">No</button>
+  </div>
+</template>
