@@ -6,6 +6,12 @@ MongoDB, Express, Angular 2 & NodeJS
 
 ### Installation
 
+#### Install bower components
+- Bootstrap
+bower install bootstrap#v4.0.0-alpha.5
+
+- Font awesome
+bower install components-font-awesome --save
 
 #### RUN Steps
 ##### Server
